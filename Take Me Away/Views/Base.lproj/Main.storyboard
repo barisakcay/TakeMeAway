@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Tickets View Controller-->
         <scene sceneID="rhh-UB-0Qq">
             <objects>
-                <viewController id="4fc-s5-f2l" sceneMemberID="viewController">
+                <viewController id="4fc-s5-f2l" customClass="MyTicketsViewController" customModule="Take_Me_Away" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ung-Uc-vL3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="-2625" y="-28"/>
         </scene>
-        <!--View Controller-->
+        <!--Buy Ticket View Controller-->
         <scene sceneID="x0I-G0-EAw">
             <objects>
-                <viewController id="NN5-B4-j7f" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s75-xJ-rrl">
+                <viewController id="NN5-B4-j7f" customClass="BuyTicketViewController" customModule="Take_Me_Away" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s75-xJ-rrl" customClass="I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

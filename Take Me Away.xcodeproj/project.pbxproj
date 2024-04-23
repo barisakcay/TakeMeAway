@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		60A743462BD6A2C4009A495F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743452BD6A2C4009A495F /* AppDelegate.swift */; };
 		60A743482BD6A2C4009A495F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743472BD6A2C4009A495F /* SceneDelegate.swift */; };
-		60A7434A2BD6A2C4009A495F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743492BD6A2C4009A495F /* ViewController.swift */; };
+		60A7434A2BD6A2C4009A495F /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */; };
 		60A7434D2BD6A2C4009A495F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 60A7434C2BD6A2C4009A495F /* Base */; };
 		60A743502BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60A7434E2BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld */; };
 		60A743522BD6A2C6009A495F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A743512BD6A2C6009A495F /* Assets.xcassets */; };
 		60A743552BD6A2C6009A495F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 60A743542BD6A2C6009A495F /* Base */; };
+		60A7435D2BD6A53F009A495F /* MyTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */; };
+		60A743672BD6B823009A495F /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743652BD6B823009A495F /* Ticket+CoreDataClass.swift */; };
+		60A743682BD6B823009A495F /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */; };
+		60A743782BD7F4DC009A495F /* Buses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743772BD7F4DC009A495F /* Buses.swift */; };
+		60A7437C2BD7F908009A495F /* Buses.json in Resources */ = {isa = PBXBuildFile; fileRef = 60A7437B2BD7F908009A495F /* Buses.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60A743422BD6A2C4009A495F /* Take Me Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Me Away.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A743452BD6A2C4009A495F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A743472BD6A2C4009A495F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60A743492BD6A2C4009A495F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		60A7434C2BD6A2C4009A495F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60A7434F2BD6A2C4009A495F /* Take_Me_Away.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Take_Me_Away.xcdatamodel; sourceTree = "<group>"; };
 		60A743512BD6A2C6009A495F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A743542BD6A2C6009A495F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A743562BD6A2C6009A495F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewController.swift; sourceTree = "<group>"; };
+		60A743652BD6B823009A495F /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
+		60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		60A743772BD7F4DC009A495F /* Buses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buses.swift; sourceTree = "<group>"; };
+		60A7437B2BD7F908009A495F /* Buses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buses.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +70,43 @@
 			children = (
 				60A743452BD6A2C4009A495F /* AppDelegate.swift */,
 				60A743472BD6A2C4009A495F /* SceneDelegate.swift */,
-				60A743492BD6A2C4009A495F /* ViewController.swift */,
-				60A7434B2BD6A2C4009A495F /* Main.storyboard */,
+				60A7435F2BD6A559009A495F /* Controllers */,
+				60A743622BD6A688009A495F /* Models */,
+				60A7435E2BD6A54C009A495F /* Views */,
 				60A743512BD6A2C6009A495F /* Assets.xcassets */,
-				60A743532BD6A2C6009A495F /* LaunchScreen.storyboard */,
 				60A743562BD6A2C6009A495F /* Info.plist */,
 				60A7434E2BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld */,
+				60A7437B2BD7F908009A495F /* Buses.json */,
 			);
 			path = "Take Me Away";
+			sourceTree = "<group>";
+		};
+		60A7435E2BD6A54C009A495F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60A7434B2BD6A2C4009A495F /* Main.storyboard */,
+				60A743532BD6A2C6009A495F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		60A7435F2BD6A559009A495F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */,
+				60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		60A743622BD6A688009A495F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60A743652BD6B823009A495F /* Ticket+CoreDataClass.swift */,
+				60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */,
+				60A743772BD7F4DC009A495F /* Buses.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A7437C2BD7F908009A495F /* Buses.json in Resources */,
 				60A743522BD6A2C6009A495F /* Assets.xcassets in Resources */,
 				60A743552BD6A2C6009A495F /* Base in Resources */,
 				60A7434D2BD6A2C4009A495F /* Base in Resources */,
@@ -141,10 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A743782BD7F4DC009A495F /* Buses.swift in Sources */,
+				60A7435D2BD6A53F009A495F /* MyTicketsViewController.swift in Sources */,
 				60A743502BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld in Sources */,
-				60A7434A2BD6A2C4009A495F /* ViewController.swift in Sources */,
+				60A7434A2BD6A2C4009A495F /* BuyTicketViewController.swift in Sources */,
 				60A743462BD6A2C4009A495F /* AppDelegate.swift in Sources */,
 				60A743482BD6A2C4009A495F /* SceneDelegate.swift in Sources */,
+				60A743672BD6B823009A495F /* Ticket+CoreDataClass.swift in Sources */,
+				60A743682BD6B823009A495F /* Ticket+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

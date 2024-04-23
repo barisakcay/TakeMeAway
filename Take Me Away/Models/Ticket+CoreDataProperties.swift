@@ -16,6 +16,7 @@ extension Ticket {
         return NSFetchRequest<Ticket>(entityName: "Ticket")
     }
 
+    @NSManaged public var firmName: String?
     @NSManaged public var name: String?
     @NSManaged public var surname: String?
     @NSManaged public var id: UUID?

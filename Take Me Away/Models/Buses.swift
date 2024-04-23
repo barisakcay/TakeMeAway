@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Buses: Decodable{
+    let buses: [Bus]
+}
+
+struct Bus: Decodable {
+    let name: String?
+    let date: String?
+    let time: String?
+    let from: String?
+    let to: String?
+}
