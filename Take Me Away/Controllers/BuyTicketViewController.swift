@@ -9,68 +9,51 @@ import UIKit
 
 class BuyTicketViewController: UIViewController {
     
-    var myName: String = ""
-    var myDate: String = ""
-    var myTime: String = ""
-    var from: String = ""
-    var to: String = ""
+    var from = ""
+    var to = ""
+    var when = Date()
 
+    @IBOutlet weak var fromPickerView: UIPickerView!
+    @IBOutlet weak var toPickerView: UIPickerView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
+        fromPickerView.delegate = self
+        fromPickerView.dataSource = self
+        toPickerView.delegate = self
+        toPickerView.dataSource = self
 
-        navigationItem.title = "Buy Ticket"
-        takeAllOfThem()
-        print(myName,myDate,myTime,from,to)        
-        takeAllOfThem2()
-        print(myName,myDate,myTime,from,to)
+        navigationItem.title = "Take Me Away"
+    }
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        var num1 = fromPickerView.selectedRow(inComponent: 0)
+        var num2 = toPickerView.selectedRow(inComponent: 0)
+        when = datePicker.date
+        
+        from = cities[num1]
+        to = cities[num2]
+        when = when + 10801
+        print(when.description)
+        print(from,to,when)
+    }
+    
+    
+}
+
+extension BuyTicketViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        cities.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        cities[row]
     }
 }
 
-//MARK: - Buses fetching data
 
-extension BuyTicketViewController {
-    
-    func loadJson(filename fileName: String) -> Data? {
-        do {
-            if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
-                let fileUrl = URL(filePath: filePath)
-                let data = try Data(contentsOf: fileUrl)
-                print(data)
-                return data
-            }
-        }catch {
-            print("loadJson\(error.localizedDescription)")
-        }
-        return nil
-    }
-    
-    func parse(jsonData: Data) -> Buses? {
-        do {
-            let decodedData = try JSONDecoder().decode(Buses.self, from: jsonData)
-            return decodedData
-        }catch {
-            print("parse\(error.localizedDescription)")
-        }
-    return nil
-    }
-    
-    func takeAllOfThem() {
-        let jsonData = loadJson(filename: "Buses")
-        if let data = jsonData {
-            if let busObj = parse(jsonData: data) {
-                myName = busObj.buses[0].name!
-                myTime = busObj.buses[0].time!
-            }
-        }
-    }
-    func takeAllOfThem2() {
-        let jsonData = loadJson(filename: "Buses")
-        if let data = jsonData {
-            if let busObj = parse(jsonData: data) {
-                myName = busObj.buses[1].name!
-                myTime = busObj.buses[1].time!
-            }
-        }
-    }
-}
 

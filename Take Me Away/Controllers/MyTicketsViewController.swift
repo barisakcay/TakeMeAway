@@ -12,7 +12,7 @@ class MyTicketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "My Tickets"
+        navigationItem.title = "Take Me Away"
     }
 
 }
