@@ -79,6 +79,7 @@
 				60A7435F2BD6A559009A495F /* Controllers */,
 				60A743622BD6A688009A495F /* Models */,
 				60A7435E2BD6A54C009A495F /* Views */,
+				60F9DAB52BD9E48A00C65217 /* Extensions */,
 				60A743512BD6A2C6009A495F /* Assets.xcassets */,
 				60A743562BD6A2C6009A495F /* Info.plist */,
 				60A7434E2BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld */,
@@ -101,7 +102,6 @@
 			children = (
 				60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */,
 				60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */,
-				60A7437D2BD87CF1009A495F /* BusFetchData.swift */,
 				60A743802BD8847A009A495F /* TabBarController.swift */,
 			);
 			path = Controllers;
@@ -124,6 +124,14 @@
 				60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */,
 			);
 			path = TicketModel;
+			sourceTree = "<group>";
+		};
+		60F9DAB52BD9E48A00C65217 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				60A7437D2BD87CF1009A495F /* BusFetchData.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,8 +374,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,8 +402,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

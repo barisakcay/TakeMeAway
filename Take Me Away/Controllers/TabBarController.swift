@@ -16,8 +16,7 @@ class TabBarController: UITabBarController {
         tabBar.items![0].image = UIImage(systemName: "magnifyingglass.circle.fill")
         tabBar.items![1].title = "My Tickets"
         tabBar.items![1].image = UIImage(systemName: "ticket.fill")
-        
+        tabBar.backgroundColor = .black
+        tabBar.barTintColor = .orange
     }
-    
-
 }

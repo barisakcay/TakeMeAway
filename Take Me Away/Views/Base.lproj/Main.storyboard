@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="H5H-Do-Rcx">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ruw-V9-jbv">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ne1-fu-Q8P">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ne1-fu-Q8P">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -71,6 +71,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sUZ-91-Pwk">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="NN5-B4-j7f" kind="relationship" relationship="rootViewController" id="6XC-Iz-kH4"/>
@@ -89,14 +92,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-Gc-iei">
-                                <rect key="frame" x="136" y="479" width="120" height="36"/>
+                                <rect key="frame" x="136" y="499" width="120" height="36"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="bWK-fx-bRU"/>
                                     <constraint firstAttribute="height" constant="36" id="nY5-1l-EMi"/>
                                 </constraints>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="741387600">
-                                    <!--2024-06-29 21:00:00 +0000-->
-                                </date>
                                 <date key="maximumDate" timeIntervalSinceReferenceDate="788821200">
                                     <!--2025-12-30 21:00:00 +0000-->
                                 </date>
@@ -183,6 +184,27 @@
                                     <action selector="searchButtonTapped:" destination="NN5-B4-j7f" eventType="touchUpInside" id="NGR-sX-AhQ"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3ux-OF-Rwc">
+                                <rect key="frame" x="80" y="561" width="233" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFw-Tj-wqI">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Today"/>
+                                        <connections>
+                                            <action selector="todayButtonTapped:" destination="NN5-B4-j7f" eventType="touchUpInside" id="n80-Zb-HN1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRi-jq-800">
+                                        <rect key="frame" x="131.66666666666666" y="0.0" width="101.33333333333334" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Tomorrow"/>
+                                        <connections>
+                                            <action selector="tomorrowButtonTapped:" destination="NN5-B4-j7f" eventType="touchUpInside" id="kwd-GV-zpR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pje-ff-iDX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -200,18 +222,21 @@
                             <constraint firstItem="pje-ff-iDX" firstAttribute="trailing" secondItem="Wo8-NH-qCs" secondAttribute="trailing" id="K83-Sn-Ihm"/>
                             <constraint firstItem="EwP-Me-1qT" firstAttribute="centerX" secondItem="s75-xJ-rrl" secondAttribute="centerX" id="SOz-XF-LKw"/>
                             <constraint firstItem="XUI-Gc-iei" firstAttribute="leading" secondItem="pje-ff-iDX" secondAttribute="leading" constant="136" id="Xjg-ud-p4C"/>
+                            <constraint firstItem="3ux-OF-Rwc" firstAttribute="leading" secondItem="pje-ff-iDX" secondAttribute="leading" constant="80" id="azX-QK-sbC"/>
                             <constraint firstItem="pje-ff-iDX" firstAttribute="trailing" secondItem="Q9m-Ro-KN1" secondAttribute="trailing" id="fUI-7P-Vtb"/>
-                            <constraint firstItem="XUI-Gc-iei" firstAttribute="top" secondItem="Hox-Xb-Ku7" secondAttribute="bottom" id="ktY-R8-Gz9"/>
+                            <constraint firstItem="3ux-OF-Rwc" firstAttribute="top" secondItem="XUI-Gc-iei" secondAttribute="bottom" constant="26" id="jAG-vR-hyb"/>
+                            <constraint firstItem="XUI-Gc-iei" firstAttribute="top" secondItem="Hox-Xb-Ku7" secondAttribute="bottom" constant="20" id="ktY-R8-Gz9"/>
                             <constraint firstItem="Wo8-NH-qCs" firstAttribute="leading" secondItem="pje-ff-iDX" secondAttribute="leading" id="o4W-Td-bjv"/>
                             <constraint firstItem="WJm-Lg-iEs" firstAttribute="leading" secondItem="pje-ff-iDX" secondAttribute="leading" id="oak-6I-5vF"/>
                             <constraint firstItem="Q9m-Ro-KN1" firstAttribute="top" secondItem="pje-ff-iDX" secondAttribute="top" id="pLm-ER-PhL"/>
+                            <constraint firstItem="pje-ff-iDX" firstAttribute="trailing" secondItem="3ux-OF-Rwc" secondAttribute="trailing" constant="80" id="th2-bd-g7a"/>
                             <constraint firstItem="Q9m-Ro-KN1" firstAttribute="leading" secondItem="s75-xJ-rrl" secondAttribute="leading" id="u28-n7-uCS"/>
                             <constraint firstItem="Wo8-NH-qCs" firstAttribute="top" secondItem="WJm-Lg-iEs" secondAttribute="bottom" id="z0B-Dd-1sr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XrZ-wi-XEj">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="yEI-2J-3qn">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Jt1-Id-HaJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Jt1-Id-HaJ">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -222,7 +247,15 @@
                     <connections>
                         <outlet property="datePicker" destination="XUI-Gc-iei" id="kQC-VM-CDb"/>
                         <outlet property="fromPickerView" destination="WJm-Lg-iEs" id="2T4-9X-jrN"/>
+                        <outlet property="fromView" destination="Q9m-Ro-KN1" id="SEe-A9-XiI"/>
+                        <outlet property="mainView" destination="s75-xJ-rrl" id="n6C-x3-Vim"/>
+                        <outlet property="profileButton" destination="Jt1-Id-HaJ" id="wRp-hS-WIx"/>
+                        <outlet property="searchButton" destination="EwP-Me-1qT" id="MAg-u4-iVs"/>
                         <outlet property="toPickerView" destination="6Bp-qB-g9u" id="6Hk-wA-hZQ"/>
+                        <outlet property="toView" destination="Wo8-NH-qCs" id="gG4-Dt-INW"/>
+                        <outlet property="todayButton" destination="xFw-Tj-wqI" id="ty6-Xa-rrp"/>
+                        <outlet property="tomorrowButton" destination="dRi-jq-800" id="xsU-74-FNe"/>
+                        <outlet property="whenView" destination="Hox-Xb-Ku7" id="LXC-Xg-Zya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIT-Rn-MMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,6 +355,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.88535314798355103" green="0.46186298131942749" blue="0.057715147733688354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.88535314798355103" green="0.46186298131942749" blue="0.057715147733688354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.88535314798355103" green="0.46186298131942749" blue="0.057715147733688354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="4So-1m-MFf" kind="relationship" relationship="viewControllers" id="JU1-FG-Iif"/>
@@ -337,6 +373,9 @@
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
