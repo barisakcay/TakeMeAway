@@ -19,7 +19,7 @@ class BuyTicketViewController: UIViewController {
     @IBOutlet weak var whenView: UIView!
     @IBOutlet weak var toView: UIView!
     @IBOutlet weak var fromView: UIView!
-    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var fromPickerView: UIPickerView!
     @IBOutlet weak var toPickerView: UIPickerView!
@@ -31,6 +31,7 @@ class BuyTicketViewController: UIViewController {
         fromPickerView.dataSource = self
         toPickerView.delegate = self
         toPickerView.dataSource = self
+        toPickerView.selectRow(1, inComponent: 0, animated: true)
 
         loadingSettings()
     }
@@ -40,6 +41,12 @@ class BuyTicketViewController: UIViewController {
         let num2 = toPickerView.selectedRow(inComponent: 0)
         print(datePicker.date)
         when = datePicker.date
+        if toPickerView.selectedRow(inComponent: 0) == fromPickerView.selectedRow(inComponent: 0) {
+            print("gidiş geliş aynı yere nere voy")
+        }
+        else {
+            performSegue(withIdentifier: "BusListVC", sender: self)
+        }
         
         
         from = cities[num1]
@@ -93,7 +100,6 @@ extension BuyTicketViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return cities[row]
-        //TODO: Can't be selected same value at the same time by two of picker views. Solve this!
     }
 }
 

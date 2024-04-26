@@ -22,6 +22,9 @@
 		60A7437E2BD87CF1009A495F /* BusFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A7437D2BD87CF1009A495F /* BusFetchData.swift */; };
 		60A743812BD8847A009A495F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743802BD8847A009A495F /* TabBarController.swift */; };
 		60F9DA902BD88D5600C65217 /* CitiesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DA8F2BD88D5600C65217 /* CitiesArray.swift */; };
+		60F9DAB92BDAE37200C65217 /* BusListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F9DAB82BDAE37200C65217 /* BusListCell.xib */; };
+		60F9DABA2BDAE37200C65217 /* BusListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAB72BDAE37200C65217 /* BusListCell.swift */; };
+		60F9DABC2BDAE7CE00C65217 /* BusListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DABB2BDAE7CE00C65217 /* BusListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		60A7437D2BD87CF1009A495F /* BusFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusFetchData.swift; sourceTree = "<group>"; };
 		60A743802BD8847A009A495F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		60F9DA8F2BD88D5600C65217 /* CitiesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesArray.swift; sourceTree = "<group>"; };
+		60F9DAB72BDAE37200C65217 /* BusListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusListCell.swift; sourceTree = "<group>"; };
+		60F9DAB82BDAE37200C65217 /* BusListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusListCell.xib; sourceTree = "<group>"; };
+		60F9DABB2BDAE7CE00C65217 /* BusListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +85,12 @@
 				60A7435F2BD6A559009A495F /* Controllers */,
 				60A743622BD6A688009A495F /* Models */,
 				60A7435E2BD6A54C009A495F /* Views */,
+				60F9DABD2BDB25CE00C65217 /* CustomCells */,
 				60F9DAB52BD9E48A00C65217 /* Extensions */,
-				60A743512BD6A2C6009A495F /* Assets.xcassets */,
 				60A743562BD6A2C6009A495F /* Info.plist */,
-				60A7434E2BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld */,
 				60A7437B2BD7F908009A495F /* Buses.json */,
+				60A743512BD6A2C6009A495F /* Assets.xcassets */,
+				60A7434E2BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld */,
 			);
 			path = "Take Me Away";
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 				60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */,
 				60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */,
 				60A743802BD8847A009A495F /* TabBarController.swift */,
+				60F9DABB2BDAE7CE00C65217 /* BusListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +140,23 @@
 				60A7437D2BD87CF1009A495F /* BusFetchData.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		60F9DAB62BDAE33F00C65217 /* BusListCell */ = {
+			isa = PBXGroup;
+			children = (
+				60F9DAB72BDAE37200C65217 /* BusListCell.swift */,
+				60F9DAB82BDAE37200C65217 /* BusListCell.xib */,
+			);
+			path = BusListCell;
+			sourceTree = "<group>";
+		};
+		60F9DABD2BDB25CE00C65217 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				60F9DAB62BDAE33F00C65217 /* BusListCell */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +220,7 @@
 				60A7437C2BD7F908009A495F /* Buses.json in Resources */,
 				60A743522BD6A2C6009A495F /* Assets.xcassets in Resources */,
 				60A743552BD6A2C6009A495F /* Base in Resources */,
+				60F9DAB92BDAE37200C65217 /* BusListCell.xib in Resources */,
 				60A7434D2BD6A2C4009A495F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +238,9 @@
 				60F9DA902BD88D5600C65217 /* CitiesArray.swift in Sources */,
 				60A743812BD8847A009A495F /* TabBarController.swift in Sources */,
 				60A7434A2BD6A2C4009A495F /* BuyTicketViewController.swift in Sources */,
+				60F9DABA2BDAE37200C65217 /* BusListCell.swift in Sources */,
 				60A743462BD6A2C4009A495F /* AppDelegate.swift in Sources */,
+				60F9DABC2BDAE7CE00C65217 /* BusListViewController.swift in Sources */,
 				60A743482BD6A2C4009A495F /* SceneDelegate.swift in Sources */,
 				60A743672BD6B823009A495F /* Ticket+CoreDataClass.swift in Sources */,
 				60A7437E2BD87CF1009A495F /* BusFetchData.swift in Sources */,

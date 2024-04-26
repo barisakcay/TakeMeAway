@@ -256,23 +256,28 @@
                         <outlet property="todayButton" destination="xFw-Tj-wqI" id="ty6-Xa-rrp"/>
                         <outlet property="tomorrowButton" destination="dRi-jq-800" id="xsU-74-FNe"/>
                         <outlet property="whenView" destination="Hox-Xb-Ku7" id="LXC-Xg-Zya"/>
+                        <segue destination="JG4-hg-8ho" kind="show" identifier="BusListVC" id="h5a-i8-4xW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIT-Rn-MMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1648.0916030534349" y="703.52112676056345"/>
+            <point key="canvasLocation" x="-1648" y="704"/>
         </scene>
-        <!--View Controller-->
+        <!--Bus List View Controller-->
         <scene sceneID="SGx-Ab-Tbk">
             <objects>
-                <viewController id="JG4-hg-8ho" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusListVC" id="JG4-hg-8ho" customClass="BusListViewController" customModule="Take_Me_Away" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0S-ag-vqy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nf5-WV-Oc1">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JG4-hg-8ho" id="xUJ-PL-oXh"/>
+                                    <outlet property="delegate" destination="JG4-hg-8ho" id="WjZ-0R-tck"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oDZ-Nm-UFj"/>
@@ -284,6 +289,10 @@
                             <constraint firstItem="nf5-WV-Oc1" firstAttribute="leading" secondItem="oDZ-Nm-UFj" secondAttribute="leading" id="umf-wK-T7c"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3m1-P7-UJQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="nf5-WV-Oc1" id="LPu-lw-qmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftV-GJ-e1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,6 +378,7 @@
             <point key="canvasLocation" x="-1300" y="-787"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.88535314798355103" green="0.46186298131942749" blue="0.057715147733688354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

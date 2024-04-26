@@ -1,107 +1,133 @@
 { "buses": [
     {
         "name": "Kamilkoç",
-        "time": "00.05"
+        "time": "00.05",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Nilüfer",
-        "time": "00.20"
+        "time": "00.20",
+        "imageName": "nilufer"
     },
     {
         "name": "Pamukkale",
-        "time": "00.45"
+        "time": "00.45",
+        "imageName": "pamukkale"
     },
     {
         "name": "Kamilkoç",
-        "time": "01.15"
+        "time": "01.15",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Astor",
-        "time": "01.45"
+        "time": "01.45",
+        "imageName": "astor"
     },
     {
         "name": "Pamukkale",
-        "time": "02.15"
+        "time": "02.15",
+        "imageName": "pamukkale"
     },
     {
         "name": "Ali Osman Ulusoy",
-        "time": "03.00"
+        "time": "03.00",
+        "imageName": "aliosmanulusoy"
     },
     {
         "name": "Varan",
-        "time": "04.45"
+        "time": "04.45",
+        "imageName": "varan"
     },
     {
         "name": "Astor",
-        "time": "05.20"
+        "time": "05.20",
+        "imageName": "astor"
     },
     {
         "name": "Kamilkoç",
-        "time": "06.15"
+        "time": "06.15",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Pamukkale",
-        "time": "07.00"
+        "time": "07.00",
+        "imageName": "pamukkale"
     },
     {
         "name": "Kamilkoç",
-        "time": "08.05"
+        "time": "08.05",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Nilüfer",
-        "time": "09.25"
+        "time": "09.25",
+        "imageName": "nilufer"
     },
     {
         "name": "Pamukkale",
-        "time": "10.30"
+        "time": "10.30",
+        "imageName": "pamukkale"
     },
     {
         "name": "Kamilkoç",
-        "time": "12.00"
+        "time": "12.00",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Astor",
-        "time": "13.25"
+        "time": "13.25",
+        "imageName": "astor"
     },
     {
         "name": "Pamukkale",
-        "time": "14.45"
+        "time": "14.45",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Ali Osman Ulusoy",
-        "time": "15.15"
+        "time": "15.15",
+        "imageName": "aliosmanulusoy"
     },
     {
         "name": "Varan",
-        "time": "16.20"
+        "time": "16.20",
+        "imageName": "varan"
     },
     {
         "name": "Astor",
-        "time": "17.45"
+        "time": "17.45",
+        "imageName": "astor"
     },
     {
         "name": "Kamilkoç",
-        "time": "18.30"
+        "time": "18.30",
+        "imageName": "kamilkoc"
     },
     {
         "name": "Pamukkale",
-        "time": "19.20"
+        "time": "19.20",
+        "imageName": "pamukkale"
     },
     {
         "name": "Kamilkoç",
-        "time": "20.00"
+        "time": "20.00",
+        "imageName": "kamilkoc"
     },
     {
-        "name": "Kamilkoç",
-        "time": "21.30"
+        "name": "Varan",
+        "time": "21.30",
+        "imageName": "varan"
     },
     {
-        "name": "Kamilkoç",
-        "time": "22.45"
+        "name": "Nilüfer",
+        "time": "22.45",
+        "imageName": "nilufer"
     },
     {
-        "name": "Kamilkoç",
-        "time": "23.15"
+        "name": "Astor",
+        "time": "23.15",
+        "imageName": "astor"
     },
     ]
 }

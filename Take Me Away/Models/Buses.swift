@@ -15,6 +15,7 @@ struct Bus: Decodable {
     let name: String?
     let date: String?
     let time: String?
+    let imageName: String?
     let from: String?
     let to: String?
 }

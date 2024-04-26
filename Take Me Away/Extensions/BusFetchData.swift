@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension BuyTicketViewController {
+extension BusListViewController {
     
     func loadJson(filename fileName: String) -> Data? {
         do {
