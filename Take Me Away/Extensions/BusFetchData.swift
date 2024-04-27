@@ -14,7 +14,6 @@ extension BusListViewController {
             if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
                 let fileUrl = URL(filePath: filePath)
                 let data = try Data(contentsOf: fileUrl)
-                print(data)
                 return data
             }
         }catch {
@@ -30,25 +29,6 @@ extension BusListViewController {
         }catch {
             print("parse\(error.localizedDescription)")
         }
-    return nil
+        return nil
     }
-    
-//    func takeAllOfThem() {
-//        let jsonData = loadJson(filename: "Buses")
-//        if let data = jsonData {
-//            if let busObj = parse(jsonData: data) {
-//                myName = busObj.buses[0].name!
-//                myTime = busObj.buses[0].time!
-//            }
-//        }
-//    }
-//    func takeAllOfThem2() {
-//        let jsonData = loadJson(filename: "Buses")
-//        if let data = jsonData {
-//            if let busObj = parse(jsonData: data) {
-//                myName = busObj.buses[1].name!
-//                myTime = busObj.buses[1].time!
-//            }
-//        }
-//    }
 }

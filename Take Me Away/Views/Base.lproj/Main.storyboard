@@ -275,8 +275,8 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="JG4-hg-8ho" id="xUJ-PL-oXh"/>
-                                    <outlet property="delegate" destination="JG4-hg-8ho" id="WjZ-0R-tck"/>
+                                    <outlet property="dataSource" destination="JG4-hg-8ho" id="EdW-oB-d1g"/>
+                                    <outlet property="delegate" destination="JG4-hg-8ho" id="BAa-aT-Ao7"/>
                                 </connections>
                             </tableView>
                         </subviews>

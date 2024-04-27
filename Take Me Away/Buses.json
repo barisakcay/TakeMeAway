@@ -2,132 +2,158 @@
     {
         "name": "Kamilkoç",
         "time": "00.05",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "130 ₺"
     },
     {
         "name": "Nilüfer",
         "time": "00.20",
-        "imageName": "nilufer"
+        "imageName": "nilufer",
+        "price": "120 ₺"
     },
     {
         "name": "Pamukkale",
         "time": "00.45",
-        "imageName": "pamukkale"
+        "imageName": "pamukkale",
+        "price": "125 ₺"
     },
     {
         "name": "Kamilkoç",
         "time": "01.15",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "135 ₺"
     },
     {
         "name": "Astor",
         "time": "01.45",
-        "imageName": "astor"
+        "imageName": "astor",
+        "price": "140 ₺"
     },
     {
         "name": "Pamukkale",
         "time": "02.15",
-        "imageName": "pamukkale"
+        "imageName": "pamukkale",
+        "price": "115 ₺"
     },
     {
         "name": "Ali Osman Ulusoy",
         "time": "03.00",
-        "imageName": "aliosmanulusoy"
+        "imageName": "aliosmanulusoy",
+        "price": "120 ₺"
     },
     {
         "name": "Varan",
         "time": "04.45",
-        "imageName": "varan"
+        "imageName": "varan",
+        "price": "110 ₺"
     },
     {
         "name": "Astor",
         "time": "05.20",
-        "imageName": "astor"
+        "imageName": "astor",
+        "price": "115 ₺"
     },
     {
         "name": "Kamilkoç",
         "time": "06.15",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "130 ₺"
     },
     {
         "name": "Pamukkale",
         "time": "07.00",
-        "imageName": "pamukkale"
+        "imageName": "pamukkale",
+        "price": "120 ₺"
     },
     {
         "name": "Kamilkoç",
         "time": "08.05",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "140 ₺"
     },
     {
         "name": "Nilüfer",
         "time": "09.25",
-        "imageName": "nilufer"
+        "imageName": "nilufer",
+        "price": "125 ₺"
     },
     {
         "name": "Pamukkale",
         "time": "10.30",
-        "imageName": "pamukkale"
+        "imageName": "pamukkale",
+        "price": "170 ₺"
     },
     {
         "name": "Kamilkoç",
         "time": "12.00",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "160 ₺"
     },
     {
         "name": "Astor",
         "time": "13.25",
-        "imageName": "astor"
+        "imageName": "astor",
+        "price": "140 ₺"
     },
     {
         "name": "Pamukkale",
         "time": "14.45",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "155 ₺"
     },
     {
         "name": "Ali Osman Ulusoy",
         "time": "15.15",
-        "imageName": "aliosmanulusoy"
+        "imageName": "aliosmanulusoy",
+        "price": "110 ₺"
     },
     {
         "name": "Varan",
         "time": "16.20",
-        "imageName": "varan"
+        "imageName": "varan",
+        "price": "1125 ₺"
     },
     {
         "name": "Astor",
         "time": "17.45",
-        "imageName": "astor"
+        "imageName": "astor",
+        "price": "135 ₺"
     },
     {
         "name": "Kamilkoç",
         "time": "18.30",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "130 ₺"
     },
     {
         "name": "Pamukkale",
         "time": "19.20",
-        "imageName": "pamukkale"
+        "imageName": "pamukkale",
+        "price": "120 ₺"
     },
     {
         "name": "Kamilkoç",
         "time": "20.00",
-        "imageName": "kamilkoc"
+        "imageName": "kamilkoc",
+        "price": "135 ₺"
     },
     {
         "name": "Varan",
         "time": "21.30",
-        "imageName": "varan"
+        "imageName": "varan",
+        "price": "130 ₺"
     },
     {
         "name": "Nilüfer",
         "time": "22.45",
-        "imageName": "nilufer"
+        "imageName": "nilufer",
+        "price": "120 ₺"
     },
     {
         "name": "Astor",
         "time": "23.15",
-        "imageName": "astor"
+        "imageName": "astor",
+        "price": "100 ₺"
     },
     ]
 }

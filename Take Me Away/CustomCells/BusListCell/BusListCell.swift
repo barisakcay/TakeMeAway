@@ -31,11 +31,13 @@ class BusListCell: UITableViewCell {
            let time = model.time,
            let from = from,
            let to = to,
-           let _ = date {
+           let _ = date,
+           let price = model.price
+        {
             firmLogoView.image = UIImage(named: firmLogoName)
-            routeLabel.text = "\(from) > \(to)"
+            routeLabel.text = "\(from)  >  \(to)"
             timeLabel.text = time
-            priceLabel.text = "130 ₺"
+            priceLabel.text = price
         }
     }
 }

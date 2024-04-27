@@ -9,10 +9,6 @@ import UIKit
 
 class BuyTicketViewController: UIViewController {
     
-    var from = ""
-    var to = ""
-    var when = Date()
-    
     @IBOutlet weak var tomorrowButton: UIButton!
     @IBOutlet weak var todayButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
@@ -24,7 +20,7 @@ class BuyTicketViewController: UIViewController {
     @IBOutlet weak var fromPickerView: UIPickerView!
     @IBOutlet weak var toPickerView: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fromPickerView.delegate = self
@@ -32,27 +28,30 @@ class BuyTicketViewController: UIViewController {
         toPickerView.delegate = self
         toPickerView.dataSource = self
         toPickerView.selectRow(1, inComponent: 0, animated: true)
-
         loadingSettings()
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         let num1 = fromPickerView.selectedRow(inComponent: 0)
         let num2 = toPickerView.selectedRow(inComponent: 0)
-        print(datePicker.date)
-        when = datePicker.date
+        
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MM yyyy"
+        let selectedDate = dateFormatter.string(from: datePicker.date)
+        
         if toPickerView.selectedRow(inComponent: 0) == fromPickerView.selectedRow(inComponent: 0) {
-            print("gidiş geliş aynı yere nere voy")
+            let alert = UIAlertController(title: "Warning", message: "Please select different cities to search", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK",style: .default)
+            alert.addAction(action)
+            present(alert,animated: true,completion: nil)
         }
         else {
-            performSegue(withIdentifier: "BusListVC", sender: self)
+            let data = [cities[num1],cities[num2],selectedDate]
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "BusListVC") as! BusListViewController
+            vc.otherThings = data
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        
-        
-        from = cities[num1]
-        to = cities[num2]
-        print(when.description)
-        print(from,to,when)
     }
     @IBAction func todayButtonTapped(_ sender: UIButton) {
         datePicker.date = .now + 10801
@@ -61,7 +60,6 @@ class BuyTicketViewController: UIViewController {
     @IBAction func tomorrowButtonTapped(_ sender: UIButton) {
         datePicker.date = .now + 86400 + 10801
     }
-    
     
     private func loadingSettings() {
         navigationItem.title = "Take Me Away"
@@ -87,6 +85,7 @@ class BuyTicketViewController: UIViewController {
         tomorrowButton.layer.masksToBounds = true
     }
 }
+
 //MARK: - PickerView Methods
 
 extension BuyTicketViewController: UIPickerViewDelegate, UIPickerViewDataSource {

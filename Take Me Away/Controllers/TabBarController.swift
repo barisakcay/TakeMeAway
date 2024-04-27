@@ -17,6 +17,6 @@ class TabBarController: UITabBarController {
         tabBar.items![1].title = "My Tickets"
         tabBar.items![1].image = UIImage(systemName: "ticket.fill")
         tabBar.backgroundColor = .black
-        tabBar.barTintColor = .orange
+        tabBar.barTintColor  = UIColor.black
     }
 }

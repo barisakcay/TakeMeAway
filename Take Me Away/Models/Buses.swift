@@ -11,11 +11,9 @@ struct Buses: Decodable{
     let buses: [Bus]
 }
 
-struct Bus: Decodable {
+struct Bus: Decodable{
     let name: String?
-    let date: String?
     let time: String?
     let imageName: String?
-    let from: String?
-    let to: String?
+    let price: String?
 }
