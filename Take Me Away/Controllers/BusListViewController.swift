@@ -40,7 +40,17 @@ extension BusListViewController: UITableViewDelegate, UITableViewDataSource {
         120
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedFrom = otherThings[0]
+        let selectedTo = otherThings[1]
+        let selectedDate = otherThings[2]
+        let selectedTime = buses[indexPath.row].time!
+        let selectedPrice = buses[indexPath.row].price!
+        let selectedBranchName = buses[indexPath.row].name!
+        let myDatas = [selectedFrom,selectedTo,selectedDate,selectedTime,selectedPrice,selectedBranchName]
         
+        let seatsVc = self.storyboard?.instantiateViewController(withIdentifier: "SeatsVC") as! SeatsViewController
+        seatsVc.informations = myDatas
+        self.navigationController?.pushViewController(seatsVc, animated: true)
     }
 }
 

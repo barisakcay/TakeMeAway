@@ -37,7 +37,7 @@ class BuyTicketViewController: UIViewController {
         
         datePicker.datePickerMode = UIDatePicker.Mode.date
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MM yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         let selectedDate = dateFormatter.string(from: datePicker.date)
         
         if toPickerView.selectedRow(inComponent: 0) == fromPickerView.selectedRow(inComponent: 0) {
