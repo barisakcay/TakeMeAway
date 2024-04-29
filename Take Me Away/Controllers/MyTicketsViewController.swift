@@ -13,7 +13,5 @@ class MyTicketsViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "Take Me Away"
-
     }
-
 }

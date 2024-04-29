@@ -30,7 +30,6 @@ extension BusListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         buses.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BusListCell.identifier, for: indexPath) as? BusListCell else {return UITableViewCell()}
         cell.configure(model: buses[indexPath.row], from: otherThings[0], to: otherThings[1], date: otherThings[2])
@@ -46,8 +45,8 @@ extension BusListViewController: UITableViewDelegate, UITableViewDataSource {
         let selectedTime = buses[indexPath.row].time!
         let selectedPrice = buses[indexPath.row].price!
         let selectedBranchName = buses[indexPath.row].name!
-        let myDatas = [selectedFrom,selectedTo,selectedDate,selectedTime,selectedPrice,selectedBranchName]
-        
+        let selectedBranchImageName = buses[indexPath.row].imageName!
+        let myDatas = [selectedFrom,selectedTo,selectedDate,selectedTime,selectedPrice,selectedBranchName,selectedBranchImageName]
         let seatsVc = self.storyboard?.instantiateViewController(withIdentifier: "SeatsVC") as! SeatsViewController
         seatsVc.informations = myDatas
         self.navigationController?.pushViewController(seatsVc, animated: true)

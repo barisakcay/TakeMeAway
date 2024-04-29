@@ -16,7 +16,6 @@ class BuyTicketViewController: UIViewController {
     @IBOutlet weak var toView: UIView!
     @IBOutlet weak var fromView: UIView!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var fromPickerView: UIPickerView!
     @IBOutlet weak var toPickerView: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -72,7 +71,6 @@ class BuyTicketViewController: UIViewController {
         toView.layer.cornerRadius = toView.frame.height / 2
         fromView.backgroundColor = .orange
         fromView.layer.cornerRadius = fromView.frame.height / 2
-        profileButton.configuration?.baseForegroundColor = .orange
         toPickerView.tintColor = .white
         searchButton.tintColor = .orange
         todayButton.tintColor = .orange
@@ -93,7 +91,6 @@ extension BuyTicketViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         cities.count - 1
     }

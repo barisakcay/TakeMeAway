@@ -14,6 +14,7 @@ class SeatsViewController: UIViewController {
     @IBOutlet weak var buyButton: UIButton!
     var seatNumbers = [Int:String]()
     var informations = [String]()
+    var selectedSeats = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,6 @@ class SeatsViewController: UIViewController {
         navigationItem.title = "\(informations[0]) to \(informations[1]) \(informations[2]) - \(informations[3])"
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         let nib = UINib(nibName: SeatCell.identifier, bundle: nil)
@@ -46,13 +46,13 @@ class SeatsViewController: UIViewController {
             present(alert,animated: true,completion: nil)
         }else {
             for i in 0...seats.count - 1 {
-                print(seatNumbers[seats[i].last!]!)
-                print(informations)
-                informations.append(seatNumbers[seats[i].last!]!)
+                selectedSeats.append(seatNumbers[seats[i].last!]!)
             }
-            print(informations)
-            let passengerInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "PassengerInfoVC") as! PassengerInfoViewController
+            let passengerInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "PassengerInfoTVC") as! PassengerInfoTableViewController
             passengerInfoVC.informations = informations
+            selectedSeats.sort()
+            passengerInfoVC.seats = selectedSeats
+            selectedSeats = []
             self.navigationController?.pushViewController(passengerInfoVC, animated: true)
         }
     }
@@ -69,7 +69,6 @@ extension SeatsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return CGFloat(10)
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeatCell", for: indexPath) as? SeatCell else {return UICollectionViewCell()}
         cell.configure(seatNum: seatNumbers[indexPath.row]!)
@@ -95,17 +94,14 @@ extension SeatsViewController: UICollectionViewDelegate, UICollectionViewDataSou
             }
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? SeatCell {
             cell.deSelectedConfigure(num:indexPath.row)
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return collectionView.indexPathsForSelectedItems!.count <= 4
     }
-    
 }
 
 extension SeatsViewController {

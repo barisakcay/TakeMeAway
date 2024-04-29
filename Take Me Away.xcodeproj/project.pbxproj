@@ -15,8 +15,6 @@
 		60A743522BD6A2C6009A495F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A743512BD6A2C6009A495F /* Assets.xcassets */; };
 		60A743552BD6A2C6009A495F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 60A743542BD6A2C6009A495F /* Base */; };
 		60A7435D2BD6A53F009A495F /* MyTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */; };
-		60A743672BD6B823009A495F /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743652BD6B823009A495F /* Ticket+CoreDataClass.swift */; };
-		60A743682BD6B823009A495F /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */; };
 		60A743782BD7F4DC009A495F /* Buses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A743772BD7F4DC009A495F /* Buses.swift */; };
 		60A7437C2BD7F908009A495F /* Buses.json in Resources */ = {isa = PBXBuildFile; fileRef = 60A7437B2BD7F908009A495F /* Buses.json */; };
 		60A7437E2BD87CF1009A495F /* BusFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A7437D2BD87CF1009A495F /* BusFetchData.swift */; };
@@ -28,7 +26,7 @@
 		60F9DAC72BDD38C000C65217 /* SeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAC52BDD38C000C65217 /* SeatCell.swift */; };
 		60F9DAC82BDD38C000C65217 /* SeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F9DAC62BDD38C000C65217 /* SeatCell.xib */; };
 		60F9DACA2BDD392600C65217 /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAC92BDD392600C65217 /* SeatsViewController.swift */; };
-		60F9DACC2BDE818000C65217 /* PassengerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DACB2BDE818000C65217 /* PassengerInfoViewController.swift */; };
+		60F9DAD22BDF020200C65217 /* PassengerInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAD12BDF020200C65217 /* PassengerInfoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +40,6 @@
 		60A743542BD6A2C6009A495F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A743562BD6A2C6009A495F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewController.swift; sourceTree = "<group>"; };
-		60A743652BD6B823009A495F /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
-		60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		60A743772BD7F4DC009A495F /* Buses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buses.swift; sourceTree = "<group>"; };
 		60A7437B2BD7F908009A495F /* Buses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buses.json; sourceTree = "<group>"; };
 		60A7437D2BD87CF1009A495F /* BusFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusFetchData.swift; sourceTree = "<group>"; };
@@ -55,7 +51,7 @@
 		60F9DAC52BDD38C000C65217 /* SeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCell.swift; sourceTree = "<group>"; };
 		60F9DAC62BDD38C000C65217 /* SeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatCell.xib; sourceTree = "<group>"; };
 		60F9DAC92BDD392600C65217 /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
-		60F9DACB2BDE818000C65217 /* PassengerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerInfoViewController.swift; sourceTree = "<group>"; };
+		60F9DAD12BDF020200C65217 /* PassengerInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +116,7 @@
 				60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */,
 				60F9DABB2BDAE7CE00C65217 /* BusListViewController.swift */,
 				60F9DAC92BDD392600C65217 /* SeatsViewController.swift */,
-				60F9DACB2BDE818000C65217 /* PassengerInfoViewController.swift */,
+				60F9DAD12BDF020200C65217 /* PassengerInfoTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,20 +124,10 @@
 		60A743622BD6A688009A495F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				60A7437F2BD87D6B009A495F /* TicketModel */,
 				60A743772BD7F4DC009A495F /* Buses.swift */,
 				60F9DA8F2BD88D5600C65217 /* CitiesArray.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		60A7437F2BD87D6B009A495F /* TicketModel */ = {
-			isa = PBXGroup;
-			children = (
-				60A743652BD6B823009A495F /* Ticket+CoreDataClass.swift */,
-				60A743662BD6B823009A495F /* Ticket+CoreDataProperties.swift */,
-			);
-			path = TicketModel;
 			sourceTree = "<group>";
 		};
 		60F9DAB52BD9E48A00C65217 /* Extensions */ = {
@@ -264,11 +250,9 @@
 				60F9DABA2BDAE37200C65217 /* BusListCell.swift in Sources */,
 				60A743462BD6A2C4009A495F /* AppDelegate.swift in Sources */,
 				60F9DABC2BDAE7CE00C65217 /* BusListViewController.swift in Sources */,
+				60F9DAD22BDF020200C65217 /* PassengerInfoTableViewController.swift in Sources */,
 				60A743482BD6A2C4009A495F /* SceneDelegate.swift in Sources */,
-				60A743672BD6B823009A495F /* Ticket+CoreDataClass.swift in Sources */,
-				60F9DACC2BDE818000C65217 /* PassengerInfoViewController.swift in Sources */,
 				60A7437E2BD87CF1009A495F /* BusFetchData.swift in Sources */,
-				60A743682BD6B823009A495F /* Ticket+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
