@@ -12,6 +12,7 @@ class PassengerInfoTableViewController: UITableViewController {
 
     var informations = [String]()
     var seats = [String]()
+    let acceptableCharacters = " ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWXYZabcçdefgğhıijklmnoöpqrsştuüvwxyz"
     
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,6 +31,8 @@ class PassengerInfoTableViewController: UITableViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        nameTextField.delegate = self
+        surnameTextField.delegate = self
     }
     @objc private func dismissKeyboard() {
       view.endEditing(true)
@@ -57,9 +60,12 @@ class PassengerInfoTableViewController: UITableViewController {
             alert.addAction(action)
             present(alert,animated: true,completion: nil)
         }else {
+            let nameForSave = nameTextField.text!.prefix(1).uppercased() + nameTextField.text!.lowercased().dropFirst()
+            let surnameForSave = surnameTextField.text!.prefix(1).uppercased() + surnameTextField.text!.lowercased().dropFirst()
+            
             let newTicket = NSEntityDescription.insertNewObject(forEntityName: "Ticket", into: context)
-            newTicket.setValue(nameTextField.text, forKey: "name")
-            newTicket.setValue(surnameTextField.text, forKey: "surname")
+            newTicket.setValue(nameForSave, forKey: "name")
+            newTicket.setValue(surnameForSave, forKey: "surname")
             newTicket.setValue(informations[0], forKey: "from")
             newTicket.setValue(informations[1], forKey: "to")
             newTicket.setValue(informations[2], forKey: "date")
@@ -74,6 +80,9 @@ class PassengerInfoTableViewController: UITableViewController {
             }catch {
                 print(error.localizedDescription)
             }
+            let myTicketsVC = self.storyboard?.instantiateViewController(withIdentifier: "myTicketsView") as! MyTicketsViewController
+            self.navigationController?.pushViewController(myTicketsVC, animated: true)
+            
         }
     }
         
@@ -100,4 +109,13 @@ class PassengerInfoTableViewController: UITableViewController {
             header.layer.masksToBounds = true
         }
     }
+}
+
+extension PassengerInfoTableViewController: UITextFieldDelegate {
+    
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let cs = CharacterSet(charactersIn: acceptableCharacters).inverted
+            let filtered: String = (string.components(separatedBy: cs) as NSArray).componentsJoined(by: "")
+            return (string == filtered)
+        }
 }

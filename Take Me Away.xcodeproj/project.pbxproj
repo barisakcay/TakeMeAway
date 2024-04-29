@@ -27,6 +27,8 @@
 		60F9DAC82BDD38C000C65217 /* SeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F9DAC62BDD38C000C65217 /* SeatCell.xib */; };
 		60F9DACA2BDD392600C65217 /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAC92BDD392600C65217 /* SeatsViewController.swift */; };
 		60F9DAD22BDF020200C65217 /* PassengerInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAD12BDF020200C65217 /* PassengerInfoTableViewController.swift */; };
+		60F9DAD52BDFD8BF00C65217 /* MyTicketsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F9DAD42BDFD8BF00C65217 /* MyTicketsCell.xib */; };
+		60F9DAD62BDFD8BF00C65217 /* MyTicketsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9DAD32BDFD8BF00C65217 /* MyTicketsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		60F9DAC62BDD38C000C65217 /* SeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatCell.xib; sourceTree = "<group>"; };
 		60F9DAC92BDD392600C65217 /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
 		60F9DAD12BDF020200C65217 /* PassengerInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerInfoTableViewController.swift; sourceTree = "<group>"; };
+		60F9DAD32BDFD8BF00C65217 /* MyTicketsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsCell.swift; sourceTree = "<group>"; };
+		60F9DAD42BDFD8BF00C65217 /* MyTicketsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTicketsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +115,8 @@
 		60A7435F2BD6A559009A495F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */,
 				60A743802BD8847A009A495F /* TabBarController.swift */,
+				60A7435C2BD6A53E009A495F /* MyTicketsViewController.swift */,
 				60A743492BD6A2C4009A495F /* BuyTicketViewController.swift */,
 				60F9DABB2BDAE7CE00C65217 /* BusListViewController.swift */,
 				60F9DAC92BDD392600C65217 /* SeatsViewController.swift */,
@@ -152,6 +156,7 @@
 			children = (
 				60F9DAC42BDD38B000C65217 /* SeatCell */,
 				60F9DAB62BDAE33F00C65217 /* BusListCell */,
+				60F9DAD72BDFD8C700C65217 /* MyTicketsCell */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -163,6 +168,15 @@
 				60F9DAC62BDD38C000C65217 /* SeatCell.xib */,
 			);
 			path = SeatCell;
+			sourceTree = "<group>";
+		};
+		60F9DAD72BDFD8C700C65217 /* MyTicketsCell */ = {
+			isa = PBXGroup;
+			children = (
+				60F9DAD32BDFD8BF00C65217 /* MyTicketsCell.swift */,
+				60F9DAD42BDFD8BF00C65217 /* MyTicketsCell.xib */,
+			);
+			path = MyTicketsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +240,7 @@
 				60A7437C2BD7F908009A495F /* Buses.json in Resources */,
 				60A743522BD6A2C6009A495F /* Assets.xcassets in Resources */,
 				60F9DAC82BDD38C000C65217 /* SeatCell.xib in Resources */,
+				60F9DAD52BDFD8BF00C65217 /* MyTicketsCell.xib in Resources */,
 				60A743552BD6A2C6009A495F /* Base in Resources */,
 				60F9DAB92BDAE37200C65217 /* BusListCell.xib in Resources */,
 				60A7434D2BD6A2C4009A495F /* Base in Resources */,
@@ -243,6 +258,7 @@
 				60A7435D2BD6A53F009A495F /* MyTicketsViewController.swift in Sources */,
 				60A743502BD6A2C4009A495F /* Take_Me_Away.xcdatamodeld in Sources */,
 				60F9DA902BD88D5600C65217 /* CitiesArray.swift in Sources */,
+				60F9DAD62BDFD8BF00C65217 /* MyTicketsCell.swift in Sources */,
 				60F9DACA2BDD392600C65217 /* SeatsViewController.swift in Sources */,
 				60F9DAC72BDD38C000C65217 /* SeatCell.swift in Sources */,
 				60A743812BD8847A009A495F /* TabBarController.swift in Sources */,
